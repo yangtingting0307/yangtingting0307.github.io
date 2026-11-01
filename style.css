@@ -176,3 +176,11 @@ img,video{max-width:100%}
  .contact-top{font-size:8px}.contact h2{font-size:27vw}.contact footer span:nth-child(2){display:none}
 }
 @media(max-height:700px) and (min-width:761px){.intro,.cube-page,.contact{min-height:620px}.projects{min-height:820px}.card-field{inset-block:12% 27%}#projects .card-image{height:clamp(230px,38vh,300px)}#projects .work-card{width:clamp(190px,17vw,260px)}}
+/* Reliable editing hit areas and ordered project media */
+.project-gallery{position:relative;z-index:8;display:flex;flex-direction:column;gap:12px;overflow:visible;padding:12px 0;}
+.gallery-item{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:8px;margin:0;padding:8px;background:#eeede8;border:1px solid #1111;}
+.gallery-item>img,.gallery-item>video{grid-column:1/-1;width:100%;height:clamp(180px,35vw,560px);object-fit:contain;background:#111;}
+.gallery-item figcaption{grid-column:1/-1;display:flex;align-items:center;gap:8px;padding:2px;font:10px 'DM Mono',monospace;}
+.gallery-item figcaption span{margin-right:auto}.gallery-item button{cursor:pointer}
+.portfolio-cover{z-index:0!important}.card-image>*:not(.portfolio-cover){z-index:2}.soft-editorial .portfolio-cover{inset:0}
+.hero-card-preview,.cube-front,.card-image{cursor:pointer}.hero-card-preview .portfolio-cover,.cube-front .portfolio-cover{object-fit:cover}
