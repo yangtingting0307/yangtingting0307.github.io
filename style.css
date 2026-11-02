@@ -196,3 +196,7 @@ img,video{max-width:100%}
 /* Portfolio bilingual page headers */
 @media(max-width:760px){.site-head .edition{display:flex!important}.cube-page-meta span.page-brand,.section-meta span.page-brand{display:flex!important}}
 @media(max-width:520px){.section-meta span.page-brand{display:flex!important}.contact-top>.page-brand{margin-left:auto}}
+
+/* Align bilingual portfolio labels on one left edge; keep the page mark separate. */
+.edition,.page-brand{position:relative;align-items:flex-start;text-align:left;padding-right:12px}
+.edition::after,.page-brand::after{content:"";position:absolute;right:0;bottom:1px;width:7px;height:4px;background:#73736d}
