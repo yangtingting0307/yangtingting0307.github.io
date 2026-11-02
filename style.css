@@ -137,6 +137,14 @@
 html{font-size:clamp(14px,.85vw,17px)}
 img,video{max-width:100%}
 .site-head{padding-inline:clamp(18px,4vw,72px)}
+.edition,.page-brand{display:flex;flex-direction:column;align-items:flex-end;justify-content:center;gap:3px;white-space:nowrap;color:#777;line-height:1.15}
+.edition b,.page-brand b{font:500 11px/1.2 Manrope,Arial,sans-serif;letter-spacing:.03em;color:#222}
+.edition small,.page-brand small{font:8px/1.25 'DM Mono',monospace;letter-spacing:.06em;color:#777}
+.interlude>.page-brand{position:absolute;top:34px;right:4vw;z-index:3}
+.contact-top>.page-brand{position:static}
+.contact footer{gap:18px}
+@media(max-width:760px){.edition{display:flex}.edition b,.page-brand b{font-size:10px}.edition small,.page-brand small{font-size:7px}.cube-page-meta .page-brand,.section-meta .page-brand{display:flex}.interlude>.page-brand{top:26px;right:18px}.contact footer{gap:8px;font-size:6px}.contact footer a{display:none}}
+@media(max-width:520px){.site-head{padding-inline:14px}.edition{max-width:120px}.edition small{font-size:6px}.cube-page-meta .page-brand small,.section-meta .page-brand small{font-size:6px}.contact-top{align-items:flex-start}.contact-top>.page-brand{font-size:7px}}
 .intro-title{font-size:clamp(48px,6vw,100px)}
 .box-scene{width:min(38vw,560px);height:min(64vh,620px)}
 .hero-project-card{width:100%;min-height:100%;}
@@ -184,3 +192,7 @@ img,video{max-width:100%}
 .gallery-item figcaption span{margin-right:auto}.gallery-item button{cursor:pointer}
 .portfolio-cover{z-index:0!important}.card-image>*:not(.portfolio-cover){z-index:2}.soft-editorial .portfolio-cover{inset:0}
 .hero-card-preview,.cube-front,.card-image{cursor:pointer}.hero-card-preview .portfolio-cover,.cube-front .portfolio-cover{object-fit:cover}
+
+/* Portfolio bilingual page headers */
+@media(max-width:760px){.site-head .edition{display:flex!important}.cube-page-meta span.page-brand,.section-meta span.page-brand{display:flex!important}}
+@media(max-width:520px){.section-meta span.page-brand{display:flex!important}.contact-top>.page-brand{margin-left:auto}}
