@@ -30,6 +30,11 @@ if(cubeModel&&cubeStage&&!matchMedia('(prefers-reduced-motion: reduce)').matches
  const textElements=[...document.querySelectorAll(textSelector)];textElements.forEach((el,i)=>el.dataset.inlineEdit=String(i));
  const saveText=()=>{const data={};textElements.forEach((el,i)=>data[i]=el.innerHTML);try{localStorage.setItem('portfolio-inline-text-v2',JSON.stringify(data))}catch{}};
  try{const saved=JSON.parse(localStorage.getItem('portfolio-inline-text-v2')||'{}');textElements.forEach((el,i)=>{if(saved[i]!=null)el.innerHTML=saved[i]})}catch{}
+ // Keep site identity updates authoritative even in browsers with older locally saved text.
+ const brand=document.querySelector('.brand');if(brand){brand.innerHTML='TING<span>.</span>';brand.setAttribute('aria-label','TING 首页')}
+ const coordinate=document.querySelector('.hero-coordinate');if(coordinate)coordinate.textContent='20°13′N 117°19′E';
+ const portfolioLabel=document.querySelector('.edge-note');if(portfolioLabel)portfolioLabel.innerHTML=portfolioLabel.innerHTML.replace(/SELECTED WORKS/gi,'PORTFOLIO');
+ if(document.title.includes('Selected Works'))document.title='TING — Portfolio 2026';
  const toggle=$('#edit-text-toggle'),saveBtn=$('#save-site-edits'),hint=$('#editor-hint');let editing=false;
  toggle?.addEventListener('click',()=>{editing=!editing;toggle.textContent=editing?'完成编辑':'开始编辑';document.body.classList.toggle('site-editing',editing);textElements.forEach(el=>el.contentEditable=editing?'true':'false');if(hint)hint.textContent=editing?'点击标题、简介或说明直接修改；点到文字外自动保存':'文字修改已自动保存'});
  document.addEventListener('focusout',e=>{if(e.target.matches('[contenteditable="true"]')){saveText();if(hint)hint.textContent='文字修改已保存'}});
