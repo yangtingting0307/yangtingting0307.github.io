@@ -150,7 +150,7 @@ img,video{max-width:100%}
 .hero-project-card{width:100%;min-height:100%;}
 .projects{height:auto;min-height:clamp(900px,100svh,1120px);padding-inline:clamp(24px,4vw,72px)}
 .projects-title{font-size:clamp(72px,11vw,190px);left:clamp(24px,4vw,72px);max-width:92vw;overflow-wrap:anywhere}
-.card-field{left:50%;right:auto;width:min(100%,1600px);transform:translateX(-50%);inset-block:13% 25%;}
+.card-field{left:50%;right:auto;width:min(100%,1600px);transform:translateX(-50%);inset-block:23% 15%;}
 #projects .work-card{width:clamp(220px,18vw,320px)}
 #projects .card-image{height:clamp(280px,30vw,410px)}
 #projects .card-a{left:3%;top:6%}#projects .card-b{left:27%;top:24%}#projects .card-c{left:51%;top:5%}#projects .card-d{left:75%;top:23%}
@@ -183,7 +183,7 @@ img,video{max-width:100%}
  .interlude{min-height:500px}.interlude-word{font-size:13vw}.about-copy{max-width:55vw;font-size:12px}
  .contact-top{font-size:8px}.contact h2{font-size:27vw}.contact footer span:nth-child(2){display:none}
 }
-@media(max-height:700px) and (min-width:761px){.intro,.cube-page,.contact{min-height:620px}.projects{min-height:820px}.card-field{inset-block:12% 27%}#projects .card-image{height:clamp(230px,38vh,300px)}#projects .work-card{width:clamp(190px,17vw,260px)}}
+@media(max-height:700px) and (min-width:761px){.intro,.cube-page,.contact{min-height:620px}.projects{min-height:820px}.card-field{inset-block:22% 17%}#projects .card-image{height:clamp(230px,38vh,300px)}#projects .work-card{width:clamp(190px,17vw,260px)}}
 /* Reliable editing hit areas and ordered project media */
 .project-gallery{position:relative;z-index:8;display:flex;flex-direction:column;gap:12px;overflow:visible;padding:12px 0;}
 .gallery-item{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:8px;margin:0;padding:8px;background:#eeede8;border:1px solid #1111;}
@@ -225,3 +225,33 @@ img,video{max-width:100%}
  .intro-title{font-size:clamp(38px,8vh,56px);bottom:5%;}
  .intro-caption{bottom:10px;}
 }
+
+/* Text formatting controls in the existing editor. */
+.typography-controls{display:none;gap:12px;align-items:center}.site-editing .typography-controls{display:flex}.typography-controls label{display:flex;align-items:center;gap:4px;white-space:nowrap}.typography-controls select,.typography-controls input{font:12px Manrope,sans-serif;padding:4px;border:1px solid #999;background:#fff;color:#111}.typography-controls select{max-width:140px}.typography-controls input{width:64px}.asset-toolbar{flex-wrap:wrap}.typography-controls :focus-visible{outline:2px solid #111;outline-offset:2px}
+
+
+.custom-text-box{position:absolute;z-index:9;min-width:24px;max-width:80%;font:16px/1.5 Manrope,'Microsoft YaHei',sans-serif;color:inherit;white-space:pre-wrap;overflow-wrap:anywhere}.site-editing .custom-text-box{min-width:120px;min-height:24px}.add-text-button{display:none}.site-editing .add-text-button{display:block}
+
+
+/* Bilingual introduction: English sits two pixels below the surrounding Chinese. */
+.intro-english-line{font-size:calc(1em - 2px);}
+
+
+
+.interlude-word .moving-english-size{font-size:calc(1em - 3px);}
+
+
+/* Remove the English edition label from page four. */
+#about > .page-brand > small{display:none;}
+
+
+/* Hide the remaining portfolio page mark on page four. */
+#about > .page-brand{display:none;}
+
+
+/* Keep the page-four introduction inside the viewport at every zoom level. */
+#about .about-copy,#about .responsive-about-intro{position:absolute!important;left:auto!important;right:4%!important;top:50%!important;bottom:auto!important;translate:0 -50%!important;transform:none!important;width:min(30%,480px);max-width:calc(100% - 48px)!important;min-width:0;white-space:normal!important;overflow-wrap:anywhere;box-sizing:border-box;line-height:1.5;z-index:10} @media(max-width:900px){#about .about-copy,#about .responsive-about-intro{top:auto!important;bottom:80px!important;left:24px!important;right:24px!important;translate:none!important;width:auto;max-width:calc(100% - 48px)!important}}
+
+
+/* Remove decorative marks beside all portfolio page labels. */
+.edition::after,.page-brand::after{display:none;}
