@@ -255,3 +255,26 @@ img,video{max-width:100%}
 
 /* Remove decorative marks beside all portfolio page labels. */
 .edition::after,.page-brand::after{display:none;}
+
+/* Responsive text: wrap labels instead of squeezing or cropping their glyphs. */
+.hero-project-card{container-type:inline-size}
+.hero-project-card h2{max-width:100%;line-height:1.12!important;letter-spacing:normal!important;overflow-wrap:anywhere;word-break:normal}
+.hero-project-card h2 *{letter-spacing:normal!important;line-height:1.12!important}
+.hero-card-top,.hero-card-foot,.card-info,.intro-caption,.contact-top,.contact footer{gap:12px;flex-wrap:wrap}
+.hero-card-top>span,.hero-card-foot>span,.card-info>span{min-width:0;max-width:100%;white-space:normal;overflow-wrap:anywhere;letter-spacing:normal}
+.hero-card-foot{align-items:flex-end}
+.hero-project-card h2{font-size:clamp(24px,12cqi,72px)}
+.hero-project-card h2 span{max-width:100%;font-size:min(1em,12cqi)!important}
+.intro-title,.projects-title,.contact p,.email{max-width:92%;overflow-wrap:anywhere;white-space:normal}
+.email{letter-spacing:normal;line-height:1.5}
+.custom-text-box:not(.responsive-about-intro){max-width:min(80%,calc(100% - 24px))!important;white-space:pre-wrap;overflow-wrap:anywhere}
+@media(max-width:760px){
+ .hero-card-top,.hero-card-foot{font-size:12px;line-height:1.4}
+ .hero-card-preview{flex-shrink:1;min-height:0}
+ .hero-project-card{gap:8px}
+ .edition,.page-brand{white-space:normal;min-width:0}
+ .edition small,.page-brand small{overflow-wrap:anywhere}
+ .contact footer{align-items:flex-start}
+ .typography-controls{flex-wrap:wrap}
+ .asset-toolbar{max-height:40svh;overflow:auto}
+}
