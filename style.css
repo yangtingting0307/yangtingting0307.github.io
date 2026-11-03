@@ -281,3 +281,11 @@ img,video{max-width:100%}
 
 .site-head .menu-toggle{display:none}
 
+/* Only the contact message and its two detail lines reflow with the viewport. */
+#contact>p{translate:none!important;transform:none!important;position:relative;margin:13vh 0 0 1%!important;width:98%;max-width:98%;white-space:normal;overflow-wrap:anywhere;font-size:clamp(24px,3vw,42px);line-height:1.25;letter-spacing:normal}
+#contact>.custom-text-box{translate:none!important;transform:none!important;position:relative!important;left:auto!important;top:auto!important;right:auto!important;bottom:auto!important;width:90%;max-width:90%!important;margin-left:9%;white-space:normal!important;overflow-wrap:anywhere;line-height:1.6}
+#contact>.custom-text-box~.custom-text-box{margin-top:16px}
+#contact{height:auto;min-height:100svh;padding-bottom:max(280px,30vw)}
+#contact>.custom-text-box{margin-top:24px}
+@media(max-width:760px){#contact>p{margin-top:12vh!important;font-size:clamp(24px,6vw,38px)}#contact>.custom-text-box{margin-left:4%;width:92%;max-width:92%!important}#contact{padding-bottom:240px}}
+

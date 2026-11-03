@@ -283,7 +283,14 @@ img,video{max-width:100%}
  .typography-controls{flex-wrap:wrap}
  .asset-toolbar{max-height:40svh;overflow:auto}
 }
-</style><style>.site-head .menu-toggle{display:none}</style></head>
+</style><style>.site-head .menu-toggle{display:none}</style><style>/* Only the contact message and its two detail lines reflow with the viewport. */
+#contact>p{translate:none!important;transform:none!important;position:relative;margin:13vh 0 0 1%!important;width:98%;max-width:98%;white-space:normal;overflow-wrap:anywhere;font-size:clamp(24px,3vw,42px);line-height:1.25;letter-spacing:normal}
+#contact>.custom-text-box{translate:none!important;transform:none!important;position:relative!important;left:auto!important;top:auto!important;right:auto!important;bottom:auto!important;width:90%;max-width:90%!important;margin-left:9%;white-space:normal!important;overflow-wrap:anywhere;line-height:1.6}
+#contact>.custom-text-box~.custom-text-box{margin-top:16px}
+#contact{height:auto;min-height:100svh;padding-bottom:max(280px,30vw)}
+#contact>.custom-text-box{margin-top:24px}
+@media(max-width:760px){#contact>p{margin-top:12vh!important;font-size:clamp(24px,6vw,38px)}#contact>.custom-text-box{margin-left:4%;width:92%;max-width:92%!important}#contact{padding-bottom:240px}}
+</style></head>
 <body>
 <header class="site-head"><a class="brand" href="#top" aria-label="TING 首页" data-inline-edit="0">TING<span>.</span></a><nav aria-label="主导航"><a href="#projects" data-inline-edit="1">PORTFOLIO</a><a href="#about" data-inline-edit="2">ABOUT</a><a href="#contact" data-inline-edit="3">CONTACT</a></nav><span class="edition" data-inline-edit="4"><b>个人作品集</b><small>Personal Portfolio&nbsp;&nbsp;</small></span></header>
 <main id="top">
