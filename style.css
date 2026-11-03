@@ -278,3 +278,6 @@ img,video{max-width:100%}
  .typography-controls{flex-wrap:wrap}
  .asset-toolbar{max-height:40svh;overflow:auto}
 }
+
+.site-head .menu-toggle{display:none}
+

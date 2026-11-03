@@ -39,7 +39,7 @@
    };
    document.querySelector('#save-site-edits')?.click();
    const copy=document.documentElement.cloneNode(true),files=new Map(),assets=new Map();
-   const css=bundledCSS;
+   const css=bundledCSS+'\n.site-head .menu-toggle{display:none}';
    copy.querySelectorAll('script,.asset-toolbar,.asset-button,.cursor-label,.direct-media-picker,.site-media-input,.gallery-item button').forEach(el=>el.remove());
    copy.querySelectorAll('link[rel="stylesheet"]').forEach(el=>{if(new URL(el.href).origin===location.origin)el.remove()});
    const style=document.createElement('style');style.textContent=css;copy.querySelector('head').append(style);
